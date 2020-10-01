@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>44383939358-9fl8ta0jvnds1edgdkr6q4e3er3pvi88.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.44383939358-9fl8ta0jvnds1edgdkr6q4e3er3pvi88</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD0-mvvqcMCUcaI4JLL7h-azPwwCCKkGY0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>44383939358</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>harooks.petFoodTracker</string>
+	<key>PROJECT_ID</key>
+	<string>petfoodtracker-1679f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>petfoodtracker-1679f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:44383939358:ios:4e86cfef6bc651a9bf770f</string>
+	<key>DATABASE_URL</key>
+	<string>https://petfoodtracker-1679f.firebaseio.com</string>
+</dict>
+</plist>
