@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FoodTimeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var foodTimeLabel: UILabel!
@@ -21,29 +22,12 @@ class FoodTimeTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-//    @objc func datePickerValueDidChange(sender: UIDatePicker) {
-//
-//        let dateFormatter = DateFormatter()
-//
-//        dateFormatter.timeStyle = DateFormatter.Style.short
-//
-//        let timeString = dateFormatter.string(from: sender.date)
-//
-//        timeLabel.text = timeString
-//
-//    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func showPicker(){
-        guard timePicker.isHidden else { return }
-        
-        
-        //containerViewHeight.constant = FoodTimeTableViewCell.c
-    }
     
     @IBAction func timePickerChanged(_ sender: Any) {
         
@@ -55,7 +39,12 @@ class FoodTimeTableViewCell: UITableViewCell {
         
         timeLabel.text = timeString
         
+    
+        //print(Date())
     }
+
+
+    
     
 
     

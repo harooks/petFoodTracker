@@ -11,6 +11,8 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
+let db = Firestore.firestore()
+
 class SignUpViewController: UIViewController {
     
     @IBOutlet var emailTextField: UITextField!
@@ -23,20 +25,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     //textfield を確認
     func validateTextFields() -> String? {
@@ -62,21 +53,21 @@ class SignUpViewController: UIViewController {
             
             //create user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-
-                    //user created successfully. Save data in firestore
-                    let db = Firestore.firestore()
-
-                db.collection("users").addDocument(data: ["email": email, "password": password, "uid": result!.user.uid]) { (error) in
-
-                        if error != nil {
-                            print("error saving data")
-                        }
-                        
-                        //transition to home screen
-                        self.transitionToHome()
-                    }
+                
+                //user created successfully. Save data in firestore
+                
+                db.collection("users").document(result!.user.uid).setData(["email": email, "password": password, "didFeedPet": false, "uid": result!.user.uid])
+                
+                if error != nil {
+                    print("error saving data")
+                }
+                
+                //transition to home screen
+                self.transitionToHome()
+                
+                
             }
-
+            
         }
     }
     
@@ -89,8 +80,8 @@ class SignUpViewController: UIViewController {
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
-
-//let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewViewController") as! NewViewController
+    
+    //let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewViewController") as! NewViewController
     
     //self.navigationController?.pushViewController(newViewController, animated: true)
 }

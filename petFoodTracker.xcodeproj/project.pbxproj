@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0262CEA41919D60DDCDE2AA8 /* Pods_petFoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E81DF51CACB0431E8C61BC9 /* Pods_petFoodTracker.framework */; };
-		F598A511252380760060B2CD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F598A510252380760060B2CD /* SettingViewController.swift */; };
+		F54C27742528562E0064A02F /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54C27722528562E0064A02F /* TimeTableViewCell.swift */; };
+		F54C27752528562E0064A02F /* TimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54C27732528562E0064A02F /* TimeTableViewCell.xib */; };
+		F5A29A14252832590095D9C5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A29A13252832590095D9C5 /* SettingViewController.swift */; };
 		F5B2F64C24B7337700D3460C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2F64B24B7337700D3460C /* AppDelegate.swift */; };
 		F5B2F64E24B7337700D3460C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2F64D24B7337700D3460C /* SceneDelegate.swift */; };
 		F5B2F65024B7337700D3460C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2F64F24B7337700D3460C /* ViewController.swift */; };
@@ -21,7 +23,7 @@
 		F5D3B4ED2522DC9D00AC3EEC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3B4EC2522DC9D00AC3EEC /* SignUpViewController.swift */; };
 		F5D3B4F22522DEB600AC3EEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3B4F12522DEB600AC3EEC /* LoginViewController.swift */; };
 		F5D3B4FB2522E0D300AC3EEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3B4FA2522E0D300AC3EEC /* HomeViewController.swift */; };
-		F5F536E32524B00800D00EE6 /* FoodTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F536E22524B00800D00EE6 /* FoodTimeTableViewCell.swift */; };
+		F5F536F3252609E900D00EE6 /* SettingStaticCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F536F2252609E800D00EE6 /* SettingStaticCellTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,9 @@
 		7B7B25957D22C809259EEEDF /* Pods-petFoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petFoodTracker.release.xcconfig"; path = "Target Support Files/Pods-petFoodTracker/Pods-petFoodTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8E81DF51CACB0431E8C61BC9 /* Pods_petFoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petFoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E29CC1E2C1DB789BD61DB5 /* Pods-petFoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petFoodTracker.debug.xcconfig"; path = "Target Support Files/Pods-petFoodTracker/Pods-petFoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		F598A510252380760060B2CD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		F54C27722528562E0064A02F /* TimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewCell.swift; sourceTree = "<group>"; };
+		F54C27732528562E0064A02F /* TimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableViewCell.xib; sourceTree = "<group>"; };
+		F5A29A13252832590095D9C5 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
 		F5B2F64824B7337700D3460C /* petFoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petFoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B2F64B24B7337700D3460C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B2F64D24B7337700D3460C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		F5D3B4EC2522DC9D00AC3EEC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F5D3B4F12522DEB600AC3EEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F5D3B4FA2522E0D300AC3EEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F5F536E22524B00800D00EE6 /* FoodTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTimeTableViewCell.swift; sourceTree = "<group>"; };
+		F5F536F2252609E800D00EE6 /* SettingStaticCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStaticCellTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +132,11 @@
 			children = (
 				F5B2F64B24B7337700D3460C /* AppDelegate.swift */,
 				F5B2F64D24B7337700D3460C /* SceneDelegate.swift */,
-				F5D3B4F62522DF0300AC3EEC /* View Controllers */,
-				F5F536E22524B00800D00EE6 /* FoodTimeTableViewCell.swift */,
-				F5B2F67B24B73A5D00D3460C /* GoogleService-Info.plist */,
 				F5B2F65124B7337700D3460C /* Main.storyboard */,
+				F5D3B4F62522DF0300AC3EEC /* View Controllers */,
+				F54C27722528562E0064A02F /* TimeTableViewCell.swift */,
+				F54C27732528562E0064A02F /* TimeTableViewCell.xib */,
+				F5B2F67B24B73A5D00D3460C /* GoogleService-Info.plist */,
 				F5B2F65424B7337900D3460C /* Assets.xcassets */,
 				F5B2F65624B7337900D3460C /* LaunchScreen.storyboard */,
 				F5B2F65924B7337900D3460C /* Info.plist */,
@@ -164,7 +169,8 @@
 				F5D3B4F12522DEB600AC3EEC /* LoginViewController.swift */,
 				F5D3B4EC2522DC9D00AC3EEC /* SignUpViewController.swift */,
 				F5D3B4FA2522E0D300AC3EEC /* HomeViewController.swift */,
-				F598A510252380760060B2CD /* SettingViewController.swift */,
+				F5A29A13252832590095D9C5 /* SettingViewController.swift */,
+				F5F536F2252609E800D00EE6 /* SettingStaticCellTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 				F5B2F67C24B73A5D00D3460C /* GoogleService-Info.plist in Resources */,
 				F5B2F65524B7337900D3460C /* Assets.xcassets in Resources */,
 				F5B2F65324B7337700D3460C /* Main.storyboard in Resources */,
+				F54C27752528562E0064A02F /* TimeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,13 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F536E32524B00800D00EE6 /* FoodTimeTableViewCell.swift in Sources */,
 				F5D3B4F22522DEB600AC3EEC /* LoginViewController.swift in Sources */,
 				F5B2F65024B7337700D3460C /* ViewController.swift in Sources */,
 				F5B2F64C24B7337700D3460C /* AppDelegate.swift in Sources */,
 				F5B2F64E24B7337700D3460C /* SceneDelegate.swift in Sources */,
 				F5D3B4FB2522E0D300AC3EEC /* HomeViewController.swift in Sources */,
-				F598A511252380760060B2CD /* SettingViewController.swift in Sources */,
+				F54C27742528562E0064A02F /* TimeTableViewCell.swift in Sources */,
+				F5A29A14252832590095D9C5 /* SettingViewController.swift in Sources */,
+				F5F536F3252609E900D00EE6 /* SettingStaticCellTableViewController.swift in Sources */,
 				F5D3B4ED2522DC9D00AC3EEC /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
