@@ -135,11 +135,11 @@
 				F5B2F65124B7337700D3460C /* Main.storyboard */,
 				F5D3B4F62522DF0300AC3EEC /* View Controllers */,
 				F54C27722528562E0064A02F /* TimeTableViewCell.swift */,
+				F5B2F65924B7337900D3460C /* Info.plist */,
 				F54C27732528562E0064A02F /* TimeTableViewCell.xib */,
 				F5B2F67B24B73A5D00D3460C /* GoogleService-Info.plist */,
 				F5B2F65424B7337900D3460C /* Assets.xcassets */,
 				F5B2F65624B7337900D3460C /* LaunchScreen.storyboard */,
-				F5B2F65924B7337900D3460C /* Info.plist */,
 			);
 			path = petFoodTracker;
 			sourceTree = "<group>";

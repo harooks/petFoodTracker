@@ -25,7 +25,8 @@ class HomeViewController: UIViewController {
     
     let breakfastTime = saveTime.object(forKey: "breakfastTime") as! Date
     
-    
+    var timer = Timer()
+    var count:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,20 +44,10 @@ class HomeViewController: UIViewController {
     @IBAction func touchDownMainButton(_ sender: Any) {
         
         
-        //while time is between breakfasttime (or dinnertime) and replace time
-        petFed()
-        
-    }
-    
-    
-    
-    func petFed() {
+ 
         
         let alert: UIAlertController = UIAlertController(title: "ご飯をあげた", message: "ご飯をあげましたか？", preferredStyle: .alert)
         
-        
-//        while (currentTime >= breakfastTime && currentTime <= (Calendar.current.date(byAdding: .hour, value: -2, to: dinnerTime)!)) || (currentTime >= dinnerTime && currentTime <= (Calendar.current.date(byAdding: .hour, value: -22, to: dinnerTime)!)) {
-            
             
             alert.addAction (
                 UIAlertAction (title: "キャンセル", style: .cancel))
@@ -64,6 +55,31 @@ class HomeViewController: UIViewController {
             alert.addAction (
                 UIAlertAction (
                     title: "OK", style: .default, handler: { action in
+                        
+                        self.petFed()
+                        
+                        //3 時間後にオフにする
+                        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+                            self.count += 1
+                            print(self.count)
+                            
+                            if self.count == 10800 {
+                                timer.invalidate()
+                                self.petNotFed()
+                                self.count = 0
+                            }
+                           
+                        })
+            }
+            ))
+        present(alert, animated: true, completion: nil)
+
+    }
+    
+    
+    
+    func petFed() {
+
                         //Change UI
                         self.mainButton.setImage(UIImage(named: "foodFull"), for: .normal)
                         self.mainLabel.text = "ご飯ありがとう！"
@@ -82,25 +98,17 @@ class HomeViewController: UIViewController {
                                 print("document successfully updated")
                             }
                         }
-                    }
-                ))
+
 
             
             //push notification "pet is fed"
-        
-            
-            
-            present(alert, animated: true, completion: nil)
-        //}
-        
-        
+
         
     }
     
     func petNotFed() {
         
-        
-        
+
         
         //Change UI
         mainButton.setImage(UIImage(named: "foodEmpty"), for: .normal)

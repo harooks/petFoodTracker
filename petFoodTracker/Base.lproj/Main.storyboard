@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PWy-6l-IRx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wYL-GQ-u2J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -340,6 +340,28 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="その他" id="4ca-Ar-unS">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="9Va-Y7-U8s">
+                                        <rect key="frame" x="0.0" y="343" width="414" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Va-Y7-U8s" id="ysf-z4-Yyg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYB-VP-2Uh">
+                                                    <rect key="frame" x="151" y="18" width="113" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="サインアウト"/>
+                                                    <connections>
+                                                        <action selector="signOut:" destination="aG0-Fd-iv9" eventType="touchUpInside" id="MZU-Mt-W34"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="aG0-Fd-iv9" id="ryb-Hj-Rks"/>
@@ -355,7 +377,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBf-My-eM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5338" y="595"/>
+            <point key="canvasLocation" x="5337.68115942029" y="594.64285714285711"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="aLc-hZ-MoW">
@@ -409,8 +431,9 @@
         <!--Navigation Controller-->
         <scene sceneID="fUI-hn-jRF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wYL-GQ-u2J" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AccountNavController" automaticallyAdjustsScrollViewInsets="NO" id="wYL-GQ-u2J" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PtX-TS-yfm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qZs-Wm-Fda">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -427,7 +450,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nFb-d3-Roc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PWy-6l-IRx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavController" automaticallyAdjustsScrollViewInsets="NO" id="PWy-6l-IRx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AsL-ph-7OP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

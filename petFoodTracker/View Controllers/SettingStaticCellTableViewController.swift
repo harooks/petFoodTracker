@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 let saveTime: UserDefaults = UserDefaults.standard
 
@@ -22,8 +23,13 @@ class SettingStaticCellTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        //設定してある時間を取得してPicker に表示する
+        let breakfastTime = saveTime.object(forKey: "breakfastTime")
+        breakfastTimePicker.date = breakfastTime as! Date
+        
+        let dinnerTime = saveTime.object(forKey: "dinnerTime")
+        dinnerTimePicker.date = dinnerTime as! Date
     }
     
     
@@ -78,7 +84,7 @@ class SettingStaticCellTableViewController: UITableViewController {
         content.title = "ペットの晩ごはんの時間です"
         content.subtitle = "お腹すいたよ〜"
             
-            
+        
         let triggerTime = Calendar.current.dateComponents([.hour, .minute], from: chosenDinnerTime)
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerTime, repeats: true)
@@ -97,6 +103,24 @@ class SettingStaticCellTableViewController: UITableViewController {
         formatter.string(from: chosenDinnerTime)
         print(formatter.string(from: chosenDinnerTime))
     }
+    
+    
+    @IBAction func signOut(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+    do {
+      try firebaseAuth.signOut()
+    } catch let signOutError as NSError {
+      print ("Error signing out: %@", signOutError)
+    }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let accountViewController = storyboard.instantiateViewController(identifier: "AccountNavController")
+        view.window?.rootViewController = accountViewController
+        view.window?.makeKeyAndVisible()
+    
+    
+    }
+    
     
     
 
