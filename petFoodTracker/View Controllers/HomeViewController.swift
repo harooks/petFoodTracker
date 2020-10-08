@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+//import FirebaseMessaging
 
 class HomeViewController: UIViewController {
     
@@ -18,12 +19,12 @@ class HomeViewController: UIViewController {
     
     let formatter = DateFormatter()
     
-    let dinnerTime = saveTime.object(forKey: "dinnerTime") as! Date
+    let dinnerTime = saveTime.object(forKey: "dinnerTime")
     
     
     let currentTime = Date()
     
-    let breakfastTime = saveTime.object(forKey: "breakfastTime") as! Date
+    let breakfastTime = saveTime.object(forKey: "breakfastTime")
     
     var timer = Timer()
     var count:Int = 0

@@ -26,6 +26,8 @@ class SettingStaticCellTableViewController: UITableViewController {
         
         //設定してある時間を取得してPicker に表示する
         let breakfastTime = saveTime.object(forKey: "breakfastTime")
+    
+        
         breakfastTimePicker.date = breakfastTime as! Date
         
         let dinnerTime = saveTime.object(forKey: "dinnerTime")
@@ -59,17 +61,9 @@ class SettingStaticCellTableViewController: UITableViewController {
         UNUserNotificationCenter.current().add(notificationReq, withCompletionHandler: nil)
         
         }
-        
-        //make
-        
+
         //save chosen time in Userdefaults
         saveTime.setValue(chosenBreakfastTime, forKey: "breakfastTime")
-        
-        formatter.dateStyle = .none
-        formatter.timeStyle = .short
-        formatter.string(from: chosenBreakfastTime)
-        print(formatter.string(from: chosenBreakfastTime))
-        //print(formatter.string(from: triggerTime))
         
     }
     

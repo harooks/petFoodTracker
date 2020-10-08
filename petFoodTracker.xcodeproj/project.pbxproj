@@ -65,6 +65,7 @@
 		F5B2F66D24B7337900D3460C /* petFoodTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petFoodTrackerUITests.swift; sourceTree = "<group>"; };
 		F5B2F66F24B7337900D3460C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5B2F67B24B73A5D00D3460C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5C81B70252ECF48006945AC /* petFoodTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = petFoodTracker.entitlements; sourceTree = "<group>"; };
 		F5D3B4EC2522DC9D00AC3EEC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F5D3B4F12522DEB600AC3EEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F5D3B4FA2522E0D300AC3EEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 		F5B2F64A24B7337700D3460C /* petFoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				F5C81B70252ECF48006945AC /* petFoodTracker.entitlements */,
 				F5B2F64B24B7337700D3460C /* AppDelegate.swift */,
 				F5B2F64D24B7337700D3460C /* SceneDelegate.swift */,
 				F5B2F65124B7337700D3460C /* Main.storyboard */,
@@ -169,8 +171,8 @@
 				F5D3B4F12522DEB600AC3EEC /* LoginViewController.swift */,
 				F5D3B4EC2522DC9D00AC3EEC /* SignUpViewController.swift */,
 				F5D3B4FA2522E0D300AC3EEC /* HomeViewController.swift */,
-				F5A29A13252832590095D9C5 /* SettingViewController.swift */,
 				F5F536F2252609E800D00EE6 /* SettingStaticCellTableViewController.swift */,
+				F5A29A13252832590095D9C5 /* SettingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -543,6 +545,7 @@
 			baseConfigurationReference = A4E29CC1E2C1DB789BD61DB5 /* Pods-petFoodTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = petFoodTracker/petFoodTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38TQ7T85H2;
 				INFOPLIST_FILE = petFoodTracker/Info.plist;
@@ -562,6 +565,7 @@
 			baseConfigurationReference = 7B7B25957D22C809259EEEDF /* Pods-petFoodTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = petFoodTracker/petFoodTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38TQ7T85H2;
 				INFOPLIST_FILE = petFoodTracker/Info.plist;
