@@ -355,6 +355,11 @@ PODS:
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.9)
   - Protobuf (3.13.0)
+  - Realm (5.4.8):
+    - Realm/Headers (= 5.4.8)
+  - Realm/Headers (5.4.8)
+  - RealmSwift (5.4.8):
+    - Realm (= 5.4.8)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -363,6 +368,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Firestore
   - Firebase/Messaging
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -389,6 +395,8 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -414,7 +422,9 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
+  Realm: 042bbb59227a0159eda397b8a5a49fbd67495ce7
+  RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
 
-PODFILE CHECKSUM: 766e1e5a11e50248d1877e0522e4f467ba643ee2
+PODFILE CHECKSUM: a7043045695d478510817fa4f27abdfa50674d9c
 
 COCOAPODS: 1.9.3

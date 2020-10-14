@@ -26,7 +26,18 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        signUpButton.layer.cornerRadius = 10
+        signUpButton.layer.borderWidth = 3
+        signUpButton.layer.borderColor = UIColor(red: 51/225, green: 198/225, blue: 128/225, alpha: 1.0).cgColor
+        
+        emailTextField.layer.cornerRadius = 10
+        emailTextField.layer.borderWidth = 1.5
+        emailTextField.layer.borderColor = UIColor(red: 51/225, green: 198/225, blue: 128/225, alpha: 1.0).cgColor
+        
+        passwordTextField.layer.cornerRadius = 10
+        passwordTextField.layer.borderWidth = 1.5
+        passwordTextField.layer.borderColor = UIColor(red: 51/225, green: 198/225, blue: 128/225, alpha: 1.0).cgColor
+        
     }
     
     //textfield を確認

@@ -45,71 +45,69 @@ class HomeViewController: UIViewController {
     @IBAction func touchDownMainButton(_ sender: Any) {
         
         
- 
+        
         
         let alert: UIAlertController = UIAlertController(title: "ご飯をあげた", message: "ご飯をあげましたか？", preferredStyle: .alert)
         
-            
-            alert.addAction (
-                UIAlertAction (title: "キャンセル", style: .cancel))
-
-            alert.addAction (
-                UIAlertAction (
-                    title: "OK", style: .default, handler: { action in
+        
+        alert.addAction (
+            UIAlertAction (title: "キャンセル", style: .cancel))
+        
+        alert.addAction (
+            UIAlertAction (
+                title: "OK", style: .default, handler: { action in
+                    
+                    self.petFed()
+                    
+                    //3 時間後にオフにする
+                    self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+                        self.count += 1
+                        print(self.count)
                         
-                        self.petFed()
+                        if self.count == 10800 {
+                            timer.invalidate()
+                            self.petNotFed()
+                            self.count = 0
+                        }
                         
-                        //3 時間後にオフにする
-                        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
-                            self.count += 1
-                            print(self.count)
-                            
-                            if self.count == 10800 {
-                                timer.invalidate()
-                                self.petNotFed()
-                                self.count = 0
-                            }
-                           
-                        })
-            }
+                    })
+                }
             ))
         present(alert, animated: true, completion: nil)
-
+        
     }
     
     
     
     func petFed() {
-
-                        //Change UI
-                        self.mainButton.setImage(UIImage(named: "foodFull"), for: .normal)
-                        self.mainLabel.text = "ご飯ありがとう！"
-                        
-                        //change didFeedPet to true
-                        let currentUser = Auth.auth().currentUser
-                        let uidString = String(currentUser!.uid)
-                        let didFeedPetRef = db.collection("users").document(uidString)
-                        
-                        
-                        didFeedPetRef.updateData(["didFeedPet" : true
-                        ]) { err in
-                            if err != nil {
-                                print("Error updating document")
-                            } else {
-                                print("document successfully updated")
-                            }
-                        }
-
-
-            
-            //push notification "pet is fed"
-
+        
+        //Change UI
+        self.mainButton.setImage(UIImage(named: "foodFull"), for: .normal)
+        self.mainLabel.text = "ごはんありがとう！"
+        
+        //change didFeedPet to true
+        let currentUser = Auth.auth().currentUser
+        let uidString = String(currentUser!.uid)
+        let didFeedPetRef = db.collection("users").document(uidString)
+        
+        
+        didFeedPetRef.updateData(["didFeedPet" : true
+        ]) { err in
+            if err != nil {
+                print("Error updating document")
+            } else {
+                print("document successfully updated")
+            }
+        }
+        
+        //push notification "pet is fed"
+        
         
     }
     
     func petNotFed() {
         
-
+        
         
         //Change UI
         mainButton.setImage(UIImage(named: "foodEmpty"), for: .normal)
@@ -129,13 +127,6 @@ class HomeViewController: UIViewController {
                 print("document successfully updated")
             }
         }
-        
-        
-        //push notification "pet is fed"
-        
-        
-        //
-        
     }
     
     

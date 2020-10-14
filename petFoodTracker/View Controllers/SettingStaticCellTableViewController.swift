@@ -21,13 +21,18 @@ class SettingStaticCellTableViewController: UITableViewController {
     
     let formatter = DateFormatter()
     
+    var chosenBreakfastTime = Date()
+    var chosenDinnerTime = Date()
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveTime.setValue(chosenBreakfastTime, forKey: "breakfastTime")
+        saveTime.setValue(chosenDinnerTime, forKey: "dinnerTime")
+        
         
         //設定してある時間を取得してPicker に表示する
         let breakfastTime = saveTime.object(forKey: "breakfastTime")
-    
-        
         breakfastTimePicker.date = breakfastTime as! Date
         
         let dinnerTime = saveTime.object(forKey: "dinnerTime")
@@ -42,7 +47,7 @@ class SettingStaticCellTableViewController: UITableViewController {
     
     @IBAction func breakfastTimeChosen(_ sender: Any) {
         
-        let chosenBreakfastTime = breakfastTimePicker.date
+   
         
         if notificationSwitch.isOn {
         
@@ -69,7 +74,7 @@ class SettingStaticCellTableViewController: UITableViewController {
     
     @IBAction func dinnerTimeChosen(_ sender: Any) {
         
-        let chosenDinnerTime = dinnerTimePicker.date
+        chosenDinnerTime = dinnerTimePicker.date
         
         if notificationSwitch.isOn {
        

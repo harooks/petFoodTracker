@@ -9,6 +9,14 @@
 import UIKit
 
 class DogTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var dogPicture: UIImageView!
+    
+    @IBOutlet weak var dogName: UILabel!
+    
+
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +28,8 @@ class DogTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+   //configure
+    
 
 }

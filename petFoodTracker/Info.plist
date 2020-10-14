@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Take pictures of dogs</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Find pictures on camera to add in list</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Add picture taken to library</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -78,6 +84,11 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NIKUKYU.ttf</string>
+		<string>アプリ明朝.otf</string>
 	</array>
 </dict>
 </plist>

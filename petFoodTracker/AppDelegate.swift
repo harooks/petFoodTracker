@@ -109,6 +109,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
       completionHandler(UIBackgroundFetchResult.newData)
     }
     
+    
+    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
       print("Firebase registration token: \(fcmToken)")
 

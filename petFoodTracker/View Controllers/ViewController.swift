@@ -10,11 +10,20 @@ import UIKit
 import FirebaseDatabase
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var newAccount: UIButton!
+    
+    @IBOutlet weak var login: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
+        
+        newAccount.layer.cornerRadius = 10
+        newAccount.layer.borderWidth = 3
+        newAccount.layer.borderColor = UIColor(red: 51/225, green: 198/225, blue: 128/225, alpha: 1.0).cgColor
+        login.layer.cornerRadius = 10
+ 
         
     }
 
