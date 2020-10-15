@@ -232,59 +232,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-dn-Dpi">
-                                <rect key="frame" x="321" y="93" width="63" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Setting"/>
-                                <connections>
-                                    <segue destination="aG0-Fd-iv9" kind="show" id="Udh-PQ-maW"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おなかすいたよー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57N-uZ-ahY">
-                                <rect key="frame" x="90" y="432.5" width="234" height="31.5"/>
-                                <fontDescription key="fontDescription" name="NIKUKYU" family="NIKUKYU" pointSize="27"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOm-i4-QUj">
-                                <rect key="frame" x="90" y="295.5" width="234" height="112"/>
-                                <state key="normal" title="Button" image="foodEmpty"/>
-                                <connections>
-                                    <action selector="touchDownMainButton:" destination="Co0-9Y-e5U" eventType="touchDown" id="vEd-9q-0HQ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ごはんをあげたらうえの エサをタップしてね！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwg-8E-9eN">
-                                <rect key="frame" x="113.5" y="524" width="187" height="40"/>
+                                <rect key="frame" x="113.5" y="788" width="187" height="34"/>
                                 <fontDescription key="fontDescription" name="NIKUKYU" family="NIKUKYU" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgG-HE-cqf">
-                                <rect key="frame" x="184" y="630.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOm-i4-QUj">
+                                <rect key="frame" x="92.5" y="238" width="229" height="139"/>
+                                <state key="normal" title="Button" image="foodFull"/>
+                                <connections>
+                                    <action selector="touchDownBreakfastButton:" destination="Co0-9Y-e5U" eventType="touchUpInside" id="b4d-ID-oA1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あさごはん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-ai-Xod">
+                                <rect key="frame" x="40" y="387" width="334" height="22"/>
+                                <fontDescription key="fontDescription" name="NIKUKYU" family="NIKUKYU" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="よるごはん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6M-DK-fMs">
+                                <rect key="frame" x="40" y="617" width="334" height="22"/>
+                                <fontDescription key="fontDescription" name="NIKUKYU" family="NIKUKYU" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFF-k4-cHL" userLabel="Dinner Button">
+                                <rect key="frame" x="92.5" y="468" width="229" height="139"/>
+                                <state key="normal" title="Button" image="foodFull"/>
+                                <connections>
+                                    <action selector="touchDownDinnertButton:" destination="Co0-9Y-e5U" eventType="touchUpInside" id="dNH-pl-AyM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oWe-KX-bpf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IgG-HE-cqf" firstAttribute="top" secondItem="Mwg-8E-9eN" secondAttribute="bottom" constant="66.5" id="4qx-Lu-4Kf"/>
-                            <constraint firstItem="zOm-i4-QUj" firstAttribute="leading" secondItem="oWe-KX-bpf" secondAttribute="leading" constant="90" id="6iI-W8-xlQ"/>
-                            <constraint firstItem="oWe-KX-bpf" firstAttribute="trailing" secondItem="U7C-dn-Dpi" secondAttribute="trailing" constant="30" id="Bzo-Rq-Rdi"/>
-                            <constraint firstItem="Mwg-8E-9eN" firstAttribute="top" secondItem="57N-uZ-ahY" secondAttribute="bottom" constant="60" id="CCj-rT-LVF"/>
-                            <constraint firstItem="oWe-KX-bpf" firstAttribute="trailing" secondItem="zOm-i4-QUj" secondAttribute="trailing" constant="90" id="Cx8-6W-gbx"/>
-                            <constraint firstItem="57N-uZ-ahY" firstAttribute="top" secondItem="zOm-i4-QUj" secondAttribute="bottom" constant="25" id="QdN-1o-agz"/>
-                            <constraint firstItem="oWe-KX-bpf" firstAttribute="trailing" secondItem="57N-uZ-ahY" secondAttribute="trailing" constant="90" id="ZcR-35-OQn"/>
-                            <constraint firstItem="U7C-dn-Dpi" firstAttribute="top" secondItem="oWe-KX-bpf" secondAttribute="top" constant="5" id="f53-HF-Axo"/>
-                            <constraint firstItem="57N-uZ-ahY" firstAttribute="centerY" secondItem="1zg-I8-xN3" secondAttribute="centerY" id="gzo-se-HlR"/>
+                            <constraint firstItem="oWe-KX-bpf" firstAttribute="trailing" secondItem="HGe-ai-Xod" secondAttribute="trailing" constant="40" id="0ZC-Fm-Fh3"/>
+                            <constraint firstItem="c6M-DK-fMs" firstAttribute="leading" secondItem="oWe-KX-bpf" secondAttribute="leading" constant="40" id="25d-TE-tiA"/>
+                            <constraint firstItem="oWe-KX-bpf" firstAttribute="trailing" secondItem="zOm-i4-QUj" secondAttribute="trailing" constant="92.5" id="6SG-oM-CmL"/>
+                            <constraint firstItem="oWe-KX-bpf" firstAttribute="bottom" secondItem="Mwg-8E-9eN" secondAttribute="bottom" constant="40" id="7HP-eV-11z"/>
+                            <constraint firstItem="c6M-DK-fMs" firstAttribute="top" secondItem="LFF-k4-cHL" secondAttribute="bottom" constant="10" id="FGO-Rm-lN3"/>
+                            <constraint firstItem="HGe-ai-Xod" firstAttribute="top" secondItem="zOm-i4-QUj" secondAttribute="bottom" constant="10" id="IEe-al-afG"/>
+                            <constraint firstItem="c6M-DK-fMs" firstAttribute="centerY" secondItem="1zg-I8-xN3" secondAttribute="centerY" constant="180" id="YXS-TP-3lL"/>
+                            <constraint firstItem="oWe-KX-bpf" firstAttribute="trailing" secondItem="c6M-DK-fMs" secondAttribute="trailing" constant="40" id="cBg-bn-Rt6"/>
+                            <constraint firstItem="HGe-ai-Xod" firstAttribute="centerY" secondItem="1zg-I8-xN3" secondAttribute="centerY" constant="-50" id="ddK-pv-NvN"/>
+                            <constraint firstItem="HGe-ai-Xod" firstAttribute="leading" secondItem="oWe-KX-bpf" secondAttribute="leading" constant="40" id="k7k-Qe-X6x"/>
+                            <constraint firstItem="zOm-i4-QUj" firstAttribute="leading" secondItem="oWe-KX-bpf" secondAttribute="leading" constant="92.5" id="lhE-Bw-QLG"/>
                             <constraint firstItem="Mwg-8E-9eN" firstAttribute="centerX" secondItem="1zg-I8-xN3" secondAttribute="centerX" id="n6c-wq-8Nj"/>
-                            <constraint firstItem="57N-uZ-ahY" firstAttribute="centerX" secondItem="1zg-I8-xN3" secondAttribute="centerX" id="t3U-0C-VRE"/>
-                            <constraint firstItem="57N-uZ-ahY" firstAttribute="leading" secondItem="oWe-KX-bpf" secondAttribute="leading" constant="90" id="xeZ-rp-PB3"/>
+                            <constraint firstItem="oWe-KX-bpf" firstAttribute="trailing" secondItem="LFF-k4-cHL" secondAttribute="trailing" constant="92.5" id="pjt-7B-GgT"/>
+                            <constraint firstItem="LFF-k4-cHL" firstAttribute="leading" secondItem="oWe-KX-bpf" secondAttribute="leading" constant="92.5" id="ztM-of-Yzz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cWS-fY-GXQ"/>
+                    <navigationItem key="navigationItem" id="cWS-fY-GXQ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="L5e-mo-Yb5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="U7C-dn-Dpi">
+                                <rect key="frame" x="331" y="0.0" width="63" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="設定"/>
+                                <connections>
+                                    <segue destination="aG0-Fd-iv9" kind="show" id="Udh-PQ-maW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="mainButton" destination="zOm-i4-QUj" id="8j1-5p-tSr"/>
-                        <outlet property="mainLabel" destination="57N-uZ-ahY" id="nnr-Md-KvC"/>
+                        <outlet property="breakfastButton" destination="zOm-i4-QUj" id="UNa-0a-dKR"/>
+                        <outlet property="dinnerButton" destination="LFF-k4-cHL" id="RlB-ME-hje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UN4-Gs-eIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -798,7 +813,7 @@
     </scenes>
     <resources>
         <image name="defaultDog" width="1024" height="1024"/>
-        <image name="foodEmpty" width="227" height="112"/>
+        <image name="foodFull" width="227" height="139"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

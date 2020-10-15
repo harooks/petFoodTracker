@@ -8,7 +8,7 @@ exports.sendNotificationToTopic = functions.firestore.document('users/{userId}')
     const previousData = change.before.data();
     const data = change.after.data();
 
-    if (userDoc.exists) {
+    ///if (userDoc.exists) {
         const user = userDoc.data();
         const message = {
             notification: {
@@ -16,7 +16,7 @@ exports.sendNotificationToTopic = functions.firestore.document('users/{userId}')
                 body: "ペットにごはんが与えられました"
             }
         };
-        
+
         /// Field "didFeedPet" が false から true になった時をトリガーとする
         if (data.didFeedPet === 1 && previousData.didFeedPet === 0) {
             /// プッシュ通知を送信
@@ -25,11 +25,11 @@ exports.sendNotificationToTopic = functions.firestore.document('users/{userId}')
             } else {
                 console.error("No Firebase Cloud Messaging Token.");
             }
-        } else {
-            console.error("No User.");
-        }
+      ///  } else {
+     ///       console.error("No User.");
+      ///  }
       
-        return true;
+     ///   return true;
     }
 });
 

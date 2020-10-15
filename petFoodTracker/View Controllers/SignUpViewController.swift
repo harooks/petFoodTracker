@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController {
                 
                 //user created successfully. Save data in firestore
                 
-                db.collection("users").document(result!.user.uid).setData(["email": email, "password": password, "didFeedPet": false, "uid": result!.user.uid])
+                db.collection("users").document(result!.user.uid).setData(["email": email, "password": password, "didGiveBreakfast": false, "didGiveDinner": false, "breakfastTime": Timestamp(date: Date()), "dinnerTime": Timestamp(date: Date()),"uid": result!.user.uid])
                 
                 if error != nil {
                     print("error saving data")

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 let saveTime: UserDefaults = UserDefaults.standard
 
@@ -21,6 +22,7 @@ class SettingStaticCellTableViewController: UITableViewController {
     
     let formatter = DateFormatter()
     
+
     var chosenBreakfastTime = Date()
     var chosenDinnerTime = Date()
    
@@ -29,25 +31,28 @@ class SettingStaticCellTableViewController: UITableViewController {
         super.viewDidLoad()
         saveTime.setValue(chosenBreakfastTime, forKey: "breakfastTime")
         saveTime.setValue(chosenDinnerTime, forKey: "dinnerTime")
-        
-        
+
+        chosenBreakfastTime = breakfastTimePicker.date
+        chosenDinnerTime = dinnerTimePicker.date
+
         //設定してある時間を取得してPicker に表示する
         let breakfastTime = saveTime.object(forKey: "breakfastTime")
         breakfastTimePicker.date = breakfastTime as! Date
-        
+
         let dinnerTime = saveTime.object(forKey: "dinnerTime")
         dinnerTimePicker.date = dinnerTime as! Date
+        
+
     }
     
     
+    
     @IBAction func didChangeSwitch(_ sender: Any) {
-      
-        
     }
     
     @IBAction func breakfastTimeChosen(_ sender: Any) {
         
-   
+        chosenBreakfastTime = breakfastTimePicker.date
         
         if notificationSwitch.isOn {
         
@@ -67,9 +72,9 @@ class SettingStaticCellTableViewController: UITableViewController {
         
         }
 
-        //save chosen time in Userdefaults
+        //save chosen time in FIREBASE
         saveTime.setValue(chosenBreakfastTime, forKey: "breakfastTime")
-        
+  
     }
     
     @IBAction func dinnerTimeChosen(_ sender: Any) {
