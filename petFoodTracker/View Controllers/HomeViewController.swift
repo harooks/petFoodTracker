@@ -45,11 +45,11 @@ class HomeViewController: UIViewController {
             guard let data = snapshot?.data() else { return }
             let breakfastStatus = data["didGiveBreakfast"] as? Bool
             let dinnerStatus = data["didGiveDinner"] as? Bool
-
+            
             if breakfastStatus! {
                 self.fedBreakfast()
             } else {
-               //change breakfast UI
+                //change breakfast UI
                 self.notFedBreakfast()
             }
             
@@ -59,6 +59,16 @@ class HomeViewController: UIViewController {
                 self.notFedDinner()
             }
         }
+
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        loadDataIfNeeded() { success in
+                print(success)
+            }
+
     }
     
     
@@ -66,7 +76,7 @@ class HomeViewController: UIViewController {
         
         
         let alert: UIAlertController = UIAlertController(title: "朝飯をあげた", message: "ご飯をあげましたか？", preferredStyle: .alert)
-
+        
         alert.addAction (
             UIAlertAction (title: "キャンセル", style: .cancel))
         
@@ -86,7 +96,7 @@ class HomeViewController: UIViewController {
         
         
         let alert: UIAlertController = UIAlertController(title: "夜飯をあげた", message: "ご飯をあげましたか？", preferredStyle: .alert)
-
+        
         alert.addAction (
             UIAlertAction (title: "キャンセル", style: .cancel))
         
@@ -147,11 +157,11 @@ class HomeViewController: UIViewController {
     }
     
     func notFedBreakfast() {
-
+        
         
         //Change UI
         self.breakfastButton.setImage(UIImage(named: "foodEmpty"), for: .normal)
-   
+        
         
         //change didFeedPet to true
         let currentUser = Auth.auth().currentUser
@@ -172,7 +182,7 @@ class HomeViewController: UIViewController {
     func notFedDinner(){
         //Change UI
         self.dinnerButton.setImage(UIImage(named: "foodEmpty"), for: .normal)
-   
+        
         
         //change didFeedPet to true
         let currentUser = Auth.auth().currentUser
@@ -189,6 +199,47 @@ class HomeViewController: UIViewController {
             }
         }
         
+    }
+    
+    
+    let refreshTime = UserDefaults.standard
+    let refreshKey = "lastRefresh"
+    let calender = Calendar.current
+    
+    
+    func loadDataIfNeeded(completion: (Bool) -> Void) {
+        if isRefreshRequired() {
+            notFedDinner()
+            notFedBreakfast()
+            refreshTime.set(Date(), forKey: refreshKey)
+            completion(true)
+        } else {
+            completion(false)
+        }
+        print("this method got called")
+    }
+    
+    func isRefreshRequired() -> Bool {
+        
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+       
+        print("hi")
+        
+        guard let lastRefreshDate = refreshTime.object(forKey: refreshKey) as? Date else {
+            return true
+        }
+        
+        formatter.string(from: lastRefreshDate)
+        
+        if let diff = calender.dateComponents([.hour], from: lastRefreshDate, to: Date()).hour, diff > 12 {
+            formatter.string(from: Date())
+            print(formatter.string(from: lastRefreshDate))
+            print(formatter.string(from: Date()))
+            return true
+        } else {
+            return false
+        }
     }
     
     

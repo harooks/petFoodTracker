@@ -4,12 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Take pictures of dogs</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Find pictures on camera to add in list</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Add picture taken to library</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -21,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -35,10 +29,23 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Take pictures of dogs</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Add picture taken to library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Find pictures on camera to add in list</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NIKUKYU.ttf</string>
+		<string>アプリ明朝.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -84,11 +91,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>NIKUKYU.ttf</string>
-		<string>アプリ明朝.otf</string>
 	</array>
 </dict>
 </plist>

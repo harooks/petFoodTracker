@@ -8,15 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0262CEA41919D60DDCDE2AA8 /* Pods_petFoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E81DF51CACB0431E8C61BC9 /* Pods_petFoodTracker.framework */; };
-		F516E5522533058F00ED140E /* DogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516E5512533058F00ED140E /* DogTableViewCell.swift */; };
-		F516E5652533083500ED140E /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516E5642533083500ED140E /* DogViewController.swift */; };
-		F54C27742528562E0064A02F /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54C27722528562E0064A02F /* TimeTableViewCell.swift */; };
-		F54C27752528562E0064A02F /* TimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54C27732528562E0064A02F /* TimeTableViewCell.xib */; };
-		F550C1FB253329DD00F1AA05 /* AddDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F550C1FA253329DD00F1AA05 /* AddDogViewController.swift */; };
-		F550C2032533437500F1AA05 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F550C2022533437500F1AA05 /* Dog.swift */; };
 		F55C47122531F67800B5A81A /* NIKUKYU.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F55C47112531F67800B5A81A /* NIKUKYU.ttf */; };
 		F55C471E2531F96200B5A81A /* アプリ明朝UD.otf in Resources */ = {isa = PBXBuildFile; fileRef = F55C471D2531F96200B5A81A /* アプリ明朝UD.otf */; };
-		F5A29A14252832590095D9C5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A29A13252832590095D9C5 /* SettingViewController.swift */; };
 		F5B2F64C24B7337700D3460C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2F64B24B7337700D3460C /* AppDelegate.swift */; };
 		F5B2F64E24B7337700D3460C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2F64D24B7337700D3460C /* SceneDelegate.swift */; };
 		F5B2F65024B7337700D3460C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2F64F24B7337700D3460C /* ViewController.swift */; };
@@ -53,15 +46,8 @@
 		7B7B25957D22C809259EEEDF /* Pods-petFoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petFoodTracker.release.xcconfig"; path = "Target Support Files/Pods-petFoodTracker/Pods-petFoodTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8E81DF51CACB0431E8C61BC9 /* Pods_petFoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petFoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E29CC1E2C1DB789BD61DB5 /* Pods-petFoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petFoodTracker.debug.xcconfig"; path = "Target Support Files/Pods-petFoodTracker/Pods-petFoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		F516E5512533058F00ED140E /* DogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewCell.swift; sourceTree = "<group>"; };
-		F516E5642533083500ED140E /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
-		F54C27722528562E0064A02F /* TimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewCell.swift; sourceTree = "<group>"; };
-		F54C27732528562E0064A02F /* TimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableViewCell.xib; sourceTree = "<group>"; };
-		F550C1FA253329DD00F1AA05 /* AddDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogViewController.swift; sourceTree = "<group>"; };
-		F550C2022533437500F1AA05 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		F55C47112531F67800B5A81A /* NIKUKYU.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NIKUKYU.ttf; sourceTree = "<group>"; };
 		F55C471D2531F96200B5A81A /* アプリ明朝UD.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "アプリ明朝UD.otf"; sourceTree = "<group>"; };
-		F5A29A13252832590095D9C5 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F5B2F64824B7337700D3460C /* petFoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petFoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B2F64B24B7337700D3460C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B2F64D24B7337700D3460C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +145,6 @@
 				F5D3B4F62522DF0300AC3EEC /* View Controllers */,
 				F5B2F65924B7337900D3460C /* Info.plist */,
 				F5B2F67B24B73A5D00D3460C /* GoogleService-Info.plist */,
-				F5B9A804253733A500E7BBD9 /* 今使ってないやつ */,
 				F55C47192531F68F00B5A81A /* Font */,
 				F5B2F65424B7337900D3460C /* Assets.xcassets */,
 				F5B2F65624B7337900D3460C /* LaunchScreen.storyboard */,
@@ -183,20 +168,6 @@
 				F5B2F66F24B7337900D3460C /* Info.plist */,
 			);
 			path = petFoodTrackerUITests;
-			sourceTree = "<group>";
-		};
-		F5B9A804253733A500E7BBD9 /* 今使ってないやつ */ = {
-			isa = PBXGroup;
-			children = (
-				F54C27732528562E0064A02F /* TimeTableViewCell.xib */,
-				F516E5512533058F00ED140E /* DogTableViewCell.swift */,
-				F550C2022533437500F1AA05 /* Dog.swift */,
-				F5A29A13252832590095D9C5 /* SettingViewController.swift */,
-				F54C27722528562E0064A02F /* TimeTableViewCell.swift */,
-				F516E5642533083500ED140E /* DogViewController.swift */,
-				F550C1FA253329DD00F1AA05 /* AddDogViewController.swift */,
-			);
-			path = "今使ってないやつ";
 			sourceTree = "<group>";
 		};
 		F5D3B4F62522DF0300AC3EEC /* View Controllers */ = {
@@ -333,7 +304,6 @@
 				F5B2F65524B7337900D3460C /* Assets.xcassets in Resources */,
 				F55C47122531F67800B5A81A /* NIKUKYU.ttf in Resources */,
 				F5B2F65324B7337700D3460C /* Main.storyboard in Resources */,
-				F54C27752528562E0064A02F /* TimeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,13 +393,7 @@
 				F5B2F64C24B7337700D3460C /* AppDelegate.swift in Sources */,
 				F5B2F64E24B7337700D3460C /* SceneDelegate.swift in Sources */,
 				F5D3B4FB2522E0D300AC3EEC /* HomeViewController.swift in Sources */,
-				F54C27742528562E0064A02F /* TimeTableViewCell.swift in Sources */,
-				F5A29A14252832590095D9C5 /* SettingViewController.swift in Sources */,
-				F550C1FB253329DD00F1AA05 /* AddDogViewController.swift in Sources */,
 				F5F536F3252609E900D00EE6 /* SettingStaticCellTableViewController.swift in Sources */,
-				F516E5652533083500ED140E /* DogViewController.swift in Sources */,
-				F516E5522533058F00ED140E /* DogTableViewCell.swift in Sources */,
-				F550C2032533437500F1AA05 /* Dog.swift in Sources */,
 				F5D3B4ED2522DC9D00AC3EEC /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +576,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = harooks.petFoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -632,6 +597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = harooks.petFoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
