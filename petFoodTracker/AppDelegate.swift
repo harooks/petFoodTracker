@@ -79,6 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         // this callback will not be fired till the user taps on the notification launching the application.
         // TODO: Handle data of notification
         
+        
+        
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
@@ -112,29 +114,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     }
     
     
-    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        
+        let token = Messaging.messaging().fcmToken
         print("Firebase registration token: \(fcmToken)")
-        
-       // let tokenArray: [String] = []
-       // var token: String
-        
         
         let dataDict:[String: String] = ["token": fcmToken]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
-        // TODO: If necessary send token to application server
-        //let currentUser = Auth.auth().currentUser
-        //let uidString = String(currentUser!.uid)
-        //db.collection("users").document(uidString).setData(["token" : token])
         
-    
+        // TODO: If necessary send token to application server
+        let currentUser = Auth.auth().currentUser
+        let uidString = String(currentUser!.uid)
+        db.collection("users").document(uidString).setData(["token": token as! String])
         
         // Note: This callback is fired at each app startup and whenever a new token is generated.
     }
     
-    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-        print("Message Data:", remoteMessage.appData)
-    }
+//    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+//        print("Message Data:", remoteMessage.appData)
+//    }
     
 }
 

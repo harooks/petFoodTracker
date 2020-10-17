@@ -11,11 +11,12 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
+
 let db = Firestore.firestore()
-//let tokenArray: [String] = [token]
-//var token: String = "token"
 
 class SignUpViewController: UIViewController {
+    
+
     
     @IBOutlet var emailTextField: UITextField!
     
@@ -52,6 +53,8 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
+
+        
         
         let error = validateTextFields()
         
@@ -69,7 +72,7 @@ class SignUpViewController: UIViewController {
                 
                 //user created successfully. Save data in firestore
                 
-                db.collection("users").document(result!.user.uid).setData(["email": email, "password": password, "didGiveBreakfast": false, "didGiveDinner": false, /*"tokenArray": tokenArray,*/"uid": result!.user.uid])
+                db.collection("users").document(result!.user.uid).setData(["email": email, "password": password, "didGiveBreakfast": false, "didGiveDinner": false, "uid": result!.user.uid])
                 
                 if error != nil {
                     print("error saving data")
