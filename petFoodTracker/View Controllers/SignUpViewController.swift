@@ -41,6 +41,15 @@ class SignUpViewController: UIViewController {
         passwordTextField.layer.borderWidth = 1.5
         passwordTextField.layer.borderColor = UIColor(red: 51/225, green: 198/225, blue: 128/225, alpha: 1.0).cgColor
         
+        Messaging.messaging().retrieveFCMToken(forSenderID: "44383939358", completion: { (token, error) in
+            if let error = error {
+              print("Error fetching FCM registration token: \(error)")
+            } else if let token = token {
+              print("FCM registration token: \(token)")
+              //self.fcmRegTokenMessage.text  = "Remote FCM registration token: \(token)"
+            }
+        })
+        
     }
     
     //textfield を確認

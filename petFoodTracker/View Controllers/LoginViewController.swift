@@ -33,6 +33,9 @@ class LoginViewController: UIViewController {
 
         loginButton.layer.cornerRadius = 10
         
+        emailTextField.attributedPlaceholder = NSAttributedString(string:"Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
     }
     
     func validateTextFields() -> String? {

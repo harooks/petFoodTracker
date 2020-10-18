@@ -9,28 +9,42 @@ exports.sendNotificationToTopic = functions.firestore.document('users/{userId}')
     const data = change.after.data();
 
     ///if (userDoc.exists) {
-        const user = userDoc.data();
-        const message = {
+    const user = userDoc.data();
+    
+    ///breakfast notification
+        const message1 = {
             notification: {
                 title: "ごはんありがとう",
-                body: "ペットにごはんが与えられました"
+                body: "ペットに朝ごはんが与えられました"
+            }
+        };
+    ///dinner notification
+        const message2 = {
+            notification: {
+                title: "ごはんありがとう",
+                body: "ペットに夜ごはんが与えられました"
             }
         };
 
-        /// Field "didFeedPet" が false から true になった時をトリガーとする
-        if (data.didFeedPet === 1 && previousData.didFeedPet === 0) {
+        /// Field "didGiveBreakfast" が false から true になった時をトリガーとする
+        if (data.didGiveBreakfast === 1 && previousData.didGiveBreakfast === 0) {
             /// プッシュ通知を送信
             if (user.fcmToken) {
-                admin.messaging().sendToDevice(user.fcmToken, message);
+                admin.messaging().sendToDevice(user.fcmToken, message1);
             } else {
                 console.error("No Firebase Cloud Messaging Token.");
             }
-      ///  } else {
-     ///       console.error("No User.");
-      ///  }
-      
-     ///   return true;
-    }
+        }
+        /// Field "Dinner" が false から true になった時をトリガーとする
+        if (data.didgiveDinner === 1 && previousData.didgiveDinner === 0) {
+            /// プッシュ通知を送信
+            if (user.fcmToken) {
+                admin.messaging().sendToDevice(user.fcmToken, message2);
+            } else {
+                console.error("No Firebase Cloud Messaging Token.");
+            }
+        }
+    
 });
 
 
